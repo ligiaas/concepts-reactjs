@@ -24,6 +24,8 @@ function App() {
       const repository = res.data
       setRepositories([...repositories, repository])
     }
+
+    console.log(10 + 2 + 1 + "10")
   }
 
   async function handleRemoveRepository(id) {
@@ -41,7 +43,7 @@ function App() {
         {
           repositories.map(item => (
             <li key={item.id}>
-              <h3>{item.title}</h3>
+              <span>{item.title}</span>
               <button onClick={() => handleRemoveRepository(item.id)}>
                 Remover
               </button>
@@ -51,6 +53,7 @@ function App() {
       </ul>
 
       <button onClick={handleAddRepository}>Adicionar</button>
+      <span>ligia de almeida</span>
     </div>
   );
 }
